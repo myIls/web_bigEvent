@@ -12,14 +12,13 @@ $.ajaxPrefilter(function(options) {
     // 全局挂载 complete回调函数
     options.complete = function(res) {
       // 无论ajax请求是否成功，都会执行complete回调函数函数。
-      if (res.responseJSON.status === 1) {
+      if (res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败') {
         localStorage.removeItem('token')
         location.href = '/login.html'
+        window.parent && (window.parent.location.href = '/login.html')
       }
     }
   }
   // 在发起正在的ajax请求之前，统一拼接根路径  
-  options.url = 'http://127.0.0.1:3007'.concat(options.url)
-
-
+  options.url = 'http://be.hellohyq.cn:3007'.concat(options.url)
 })
