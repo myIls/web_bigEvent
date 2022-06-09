@@ -42,3 +42,9 @@ function randerAvatar(user) {
     $('.layui-nav-img').hide()
   }
 }
+
+// 给子页面使用，跳转 发布页 或 列表页
+function clickArt(action) {
+  action = action === 'list' ? '#art_list' : '#art_pub'
+  $(action)[0].click()
+}

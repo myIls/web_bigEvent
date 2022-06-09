@@ -1,0 +1,28 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 15px;
+  background-color: #F2F3F5;
+}
+
+[name=cover_img] {
+  display: none;
+}
+
+#img_a {
+  color: rgb(25, 148, 248);
+}
+
+#img_a img {
+  margin-right: 20px;
+  width: 400px;
+  height: 280px;
+}
+
+#c1 {
+  display: none;
+}

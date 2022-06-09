@@ -1,0 +1,15 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 15px;
+  background-color: #F2F3F5;
+}
+
+table,
+.layui-table th {
+  text-align: center;
+}
